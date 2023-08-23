@@ -76,18 +76,18 @@ class UI {
                 button.addEventListener("click", event => {
                     event.target.disabled = true;
                     event.target.style.opacity = ".3";
-                    //* get product from products
+                    // get product from products
                     let cartItem = { ...Storage.getProduct(id), amount: 1 };
-                    //* add procuct to the cart
+                    // add procuct to the cart
                     cart = [...cart, cartItem];
-                    //* save cart in local storage
+                    // save cart in local storage
                     Storage.saveCart(cart);
-                    //* save cart values
+                    // save cart values
                     this.saveCartValues(cart);
-                    //* display cart item
+                    // display cart item
                     this.addCartItem(cartItem)
-                    //* show the cart
-                    this.showCart();
+                    // show the cart
+                    // this.showCart();
                 })
             }
         })
